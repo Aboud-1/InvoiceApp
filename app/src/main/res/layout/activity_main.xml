@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="فاتورة جديدة"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:textColor="#1a237e"/>
+
+        <!-- بيانات الفاتورة -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <EditText
+                android:id="@+id/etInvoiceNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="رقم الطلبة"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="التاريخ" />
+
+            <EditText
+                android:id="@+id/etInvoiceType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="نوع الطلبة" />
+
+            <EditText
+                android:id="@+id/etStudentName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="اسم الطالب (اختياري)" />
+
+            <EditText
+                android:id="@+id/etClassNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="رقم الصف"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etClassName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="الصف"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/etCompany"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="العمل/الشركة" />
+        </LinearLayout>
+
+        <!-- المنتجات -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="المنتجات"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/productsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+
+        <Button
+            android:id="@+id/btnAddProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="إضافة منتج"
+            android:backgroundTint="#4CAF50"
+            android:layout_marginTop="8dp"/>
+
+        <!-- الإجمالي والخصم -->
+        <EditText
+            android:id="@+id/etDiscount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="الخصم (بالدولار)"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="16dp"/>
+
+        <EditText
+            android:id="@+id/etTotalWords"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="الإجمالي كتابة"/>
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="الإجمالي: 0.00"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="8dp"/>
+
+        <Button
+            android:id="@+id/btnCalculateTotal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="حساب الإجمالي"
+            android:backgroundTint="#2196F3"/>
+
+        <Button
+            android:id="@+id/btnSaveInvoice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="حفظ الفاتورة"
+            android:backgroundTint="#FF9800"
+            android:layout_marginTop="8dp"/>
+
+    </LinearLayout>
+</ScrollView>
